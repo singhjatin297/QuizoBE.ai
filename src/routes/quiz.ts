@@ -3,7 +3,8 @@ import { addQuestion, createQuiz } from "../controller/quizController.js";
 
 const router = Router();
 
-router.post("/createQuiz", createQuiz);
-router.post("/addQuestion", addQuestion);
+router.route("/createQuiz").post(createQuiz);
+
+router.route("/addQuestion").post(addQuestion);
 
 export default router;
