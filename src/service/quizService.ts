@@ -3,11 +3,16 @@ import { questionsArr, quizzes } from "../data/quizData.js";
 let quizId = 1;
 let questionId = 1;
 
-export const createQuizService = (title: string, isActive: boolean) => {
+export const createQuizService = (
+  title: string,
+  isActive: boolean,
+  status: string
+) => {
   const newQuiz = {
     id: quizId++,
     title,
     isActive,
+    status,
   };
 
   quizzes.push(newQuiz);
